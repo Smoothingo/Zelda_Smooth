@@ -260,7 +260,7 @@ def Start():
         input("Press Enter to start your legendary Adventure....")
         first_message = "Welcome to The Legend of Zelda: Breath of the Wild text adventure"
         sec_message = "You are Link, a hero in the kingdom of Hyrule."
-        third_message = "You wake up in a mysterious Cave with some kind of an old Table standing in the middle of it"
+        third_message = "You wake up in a mysterious Cave with some kind of an odd Table standing in the middle of it"
         for char in first_message:
             print(char, end='', flush=True)
             time.sleep(0.05)
