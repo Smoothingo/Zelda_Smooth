@@ -160,6 +160,5 @@ ChoiceA = {
              "Q2Ab": "After you defeated the Monster you head to a Trading outpost to sell coins and buy better Equipment at a nearby Blacksmith"},
     "Kap6": {"Q1A": "[1]Accept the Gerudo's help and work together to break the curse and defeat Vah Naboris",
             "Q2AAA": "[4]Check the map"},
-    "Kap7": {"Q1A": "You accept the Gerudo's help and work together to break the curse and defeat Vah Naboris.",
-             
-} 
+    "Kap7": {"Q1A": "You accept the Gerudo's help and work together to break the curse and defeat Vah Naboris.",}
+}
