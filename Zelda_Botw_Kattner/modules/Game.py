@@ -13,6 +13,7 @@ def Kapitel1():
         print(QandA["Kap1"]['Q2'])
         print(QandA["Kap1"]['Q3'])
         print(QandA["Kap1"]['Q4'])
+        shop_interact(shop_inventory, purse)
         choice = input("Enter your choice (1, 2, 3, 4): ")
 
         if choice == "1":
