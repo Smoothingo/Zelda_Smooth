@@ -21,7 +21,6 @@ def bsep_line():
 
 
 inventory = {
-<<<<<<< HEAD
     "weapons": {"sword": {"qty": 2, "atk": 10}, "axe": {"qty": 1, "atk": 12}, "mace": {"qty": 1, "atk": 15}},
     "food": {"potion": {"qty": 5, "health_bonus": 50}, "fish": {"qty": 2, "health_bonus": 20}},
     "defense": {"shield": {"qty": 1, "def": 5}, "armor": {"qty": 1, "def": 10}},
@@ -30,13 +29,7 @@ inventory = {
 
 }
 
-=======
-     "weapons": {"sword": {"qty": 2, "atk": 10}, "axe": {"qty": 1, "atk": 12}, "mace": {"qty": 1, "atk": 15}},
-     "food": {"potion": {"qty": 5, "health_bonus": 50}, "fish": {"qty": 2, "health_bonus": 20}},
-     "defense": {"shield": {"qty": 1, "def": 5}, "armor": {"qty": 1, "def": 10}},
-     "items": {"Map": {"qty": 1}, "Apple": {"qty": 5, "health_bonus": 10}, "Grilled Fish": {"qty": 2, "health_bonus": 30}, "Goblin Shield": {"qty": 1, "def": 8}}
- }
->>>>>>> d6b12bdf90eb8c75f20f9af327fb2d21179e9d9e
+
 # This function takes an inventory dictionary as its input and prints the contents of the inventory in a formatted manner.
 def print_inventory(inventory):
     # print the header for the inventory
@@ -189,9 +182,10 @@ inventory = {
     "food": {"potion": {"qty": 5, "health_bonus": 50}, "fish": {"qty": 2, "health_bonus": 20}},
     "defense": {"shield": {"qty": 1, "def": 5}, "armor": {"qty": 1, "def": 10}},
     "items": {"Map": {"qty": 1}, "Apple": {"qty": 5, "health_bonus": 10}, "Grilled Fish": {"qty": 2, "health_bonus": 30}, "Goblin Shield": {"qty": 1, "def": 8}},
-    "Purse": {"Gold":0}
 
 }
+
+Purse = 100
 
 
 prices = {
@@ -208,103 +202,57 @@ prices = {
     "Goblin Shield": 20
 } # prices of items in the shop
 
-def shop_system():
-    print("You meet a merchant in the town square.")
-    print("Merchant: Welcome adventurer, do you need any supplies for your journey?")
+def shop():
+    print("Willkommen im Shop!")
     while True:
-        print("What would you like to do?")
-        print("1. Buy items")
-        print("2. Sell items")
-        print("3. Leave")
-        choice = input("> ")
-        if choice == '1':
-            buy_items()
-        elif choice == '2':
-            sell_items()
-        elif choice == '3':
-            print("Merchant: Goodbye.")
+        print("Was möchten Sie tun?")
+        print("1. Kaufen")
+        print("2. Verkaufen")
+        print("3. Verlassen")
+        choice = input(">> ")
+        if choice == "1":
+            print("Was möchten Sie kaufen?")
+            for item in prices:
+                print(f"{item}: {prices[item]}")
+            item_choice = input(">> ")
+            if item_choice in prices:
+                if inventory[item_choice]["qty"] > 0:
+                    if Purse["Gold"] >= prices[item_choice]:
+                        inventory[item_choice]["qty"] -= 1
+                        Purse["Gold"] -= prices[item_choice]
+                        print(f"Sie haben {item_choice} gekauft.")
+                        print(f"Ihr neuer Kontostand beträgt {Purse['Gold']} Gold.")
+                    else:
+                        print("Sie haben nicht genug Gold.")
+                else:
+                    print(f"{item_choice} ist ausverkauft.")
+            else:
+                print("Das ist kein gültiger Artikel.")
+        elif choice == "2":
+            print("Was möchten Sie verkaufen?")
+            for item in inventory:
+                if inventory[item]["qty"] > 0:
+                    print(f"{item}: {inventory[item]['qty']}")
+            item_choice = input(">> ")
+            if item_choice in inventory:
+                qty = int(input(f"Wie viele {item_choice} möchten Sie verkaufen? "))
+                if qty <= inventory[item_choice]["qty"]:
+                    inventory[item_choice]["qty"] -= qty
+                    Purse["Gold"] += prices[item_choice] * qty
+                    print(f"Sie haben {qty} {item_choice} verkauft.")
+                    print(f"Ihr neuer Kontostand beträgt {Purse['Gold']} Gold.")
+                else:
+                    print(f"Sie haben nicht genug {item_choice}.")
+            else:
+                print("Das ist kein gültiger Artikel.")
+        elif choice == "3":
             break
         else:
-            print("Merchant: I'm sorry, I didn't understand your choice.")
-
-def buy_items():
-    print("Items for sale:")
-    for item, attributes in prices.items():
-        print(f"- {item.capitalize()} ({price} gold)")
-    print("What would you like to buy? (Enter 'done' to exit.)")
-    cart = {}
-    while True:
-        item = input("> ").lower()
-        if item == 'done':
-            break
-        elif item not in prices:
-            print("Merchant: I'm sorry, I don't have that item.")
-        elif inventory["Purse"]['Gold'] < prices[item]:
-            print("Merchant: I'm sorry, you don't have enough gold for that item.")
-        elif item in inventory["weopons"]:
-            cart[item] = cart.get(item, 0) + 1
-            inventory['gold'] -= prices[item]
-            inventory[item] += 1
-            print(f"Merchant: You bought a {item.capitalize()} for {prices[item]} gold.")
-            print(f"You have {inventory["Purse"]['Gold']} Gold left")
-
-    if cart:
-        print("Shopping Cart:")
-        for item, quantity in cart.items():
-            print(f"- {item.capitalize()}: {quantity}")
-        total_cost = calculate_total(cart)
-        print(f"Total cost: {total_cost} gold")
-        print("Would you like to buy these items? (yes or no)")
-        choice = input("> ")
-        if choice.lower() == 'yes':
-            print("Merchant: Thank you for your purchase.")
-        else:
-            for item, quantity in cart.items():
-                inventory['gold'] += prices[item] * quantity
-                inventory[item] -= quantity
-            print("Merchant: Your items have been returned to your inventory.")
-    else:
-        print("Merchant: Goodbye.")
-
-def sell_items():
-    print("Items to sell:")
-    for item, quantity in inventory.items():
-        if item != 'gold' and quantity > 0:
-            print(f"- {item.capitalize()} ({prices[item]} gold each, {quantity} in inventory)")
-    print("What would you like to sell? (Enter 'done' to exit.)")
-    sold_items = {}
-    while True:
-        item = input("> ").lower()
-        if item == 'done':
-            break
-        elif item not in prices:
-            print("Merchant: I'm sorry, I can't buy that item.")
-        elif inventory[item] == 0:
-            print("Merchant: You don't have any of those items to sell.")
-        else:
-            sold_items[item] = sold_items.get(item, 0) + 1
-            inventory['gold'] += prices[item]
-            inventory[item] -= 1
-            print(f"Merchant: I bought your {item.capitalize()} for {prices[item]} gold.")
-            print(f"You're total Gold is {inventory['gold']}")
-    if sold_items:
-        print("Sold Items:")
-        for item, quantity in sold_items.items():
-            print(f"- {item.capitalize()}: {quantity}")
-        print(f"Earned: {calculate_total(sold_items)} gold")
-    else:
-        print("Merchant: Goodbye.")
+            print("Das ist keine gültige Option.")
 
 
 
-def calculate_total(items):
-    total = 0
-    for item in items:
-        total += prices[item] * items[item]
-        return total
+shop()
     
-shop_system()
-print("Final Inventory:")
-print(inventory)
-    
+
 
