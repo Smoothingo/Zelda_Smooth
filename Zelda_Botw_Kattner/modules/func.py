@@ -1,8 +1,11 @@
 from modules.Game import *
 import pygame
+import os
+
+
 health = 10
 defense = 10
-import os
+
 
 # define functions
 def clear():
@@ -92,7 +95,7 @@ def shop():
             print("Das ist keine gültige Option.")
 
 
-
+shop()
 
 # This function takes an inventory dictionary as its input and prints the contents of the inventory in a formatted manner.
 def print_inventory(inventory):
