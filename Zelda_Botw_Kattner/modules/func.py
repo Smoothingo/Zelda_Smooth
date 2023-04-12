@@ -17,18 +17,83 @@ def ssep_line():
 
 def bsep_line():
     print("═"*100)
-        
-
 
 inventory = {
     "weapons": {"sword": {"qty": 2, "atk": 10}, "axe": {"qty": 1, "atk": 12}, "mace": {"qty": 1, "atk": 15}},
     "food": {"potion": {"qty": 5, "health_bonus": 50}, "fish": {"qty": 2, "health_bonus": 20}},
     "defense": {"shield": {"qty": 1, "def": 5}, "armor": {"qty": 1, "def": 10}},
     "items": {"Map": {"qty": 1}, "Apple": {"qty": 5, "health_bonus": 10}, "Grilled Fish": {"qty": 2, "health_bonus": 30}, "Goblin Shield": {"qty": 1, "def": 8}},
-    "Purse": {"Gold":0}
 
 }
 
+Purse = 100
+
+
+prices = {
+    "sword": 20,
+    "axe": 25,
+    "mace": 30,
+    "potion": 10,
+    "fish": 5,
+    "shield": 15,
+    "armor": 30,
+    "Map": 5,
+    "Apple": 2,
+    "Grilled Fish": 10,
+    "Goblin Shield": 20
+} # prices of items in the shop
+
+def shop():
+    print("Willkommen im Shop!")
+    while True:
+        print("Was möchten Sie tun?")
+        print("1. Kaufen")
+        print("2. Verkaufen")
+        print("3. Verlassen")
+        choice = input(">> ")
+        if choice == "1":
+            print("Was möchten Sie kaufen?")
+            for item in prices:
+                print(f"{item}: {prices[item]}")
+            item_choice = input(">> ")
+            if item_choice in prices:
+                if inventory[item_choice]["qty"] > 0:
+                    if Purse["Gold"] >= prices[item_choice]:
+                        inventory[item_choice]["qty"] -= 1
+                        Purse["Gold"] -= prices[item_choice]
+                        print(f"Sie haben {item_choice} gekauft.")
+                        print(f"Ihr neuer Kontostand beträgt {Purse['Gold']} Gold.")
+                    else:
+                        print("Sie haben nicht genug Gold.")
+                else:
+                    print(f"{item_choice} ist ausverkauft.")
+            else:
+                print("Das ist kein gültiger Artikel.")
+        elif choice == "2":
+            print("Was möchten Sie verkaufen?")
+            for item in inventory:
+                if inventory[item]["qty"] > 0:
+                    print(f"{item}: {inventory[item]['qty']}")
+            item_choice = input(">> ")
+            if item_choice in inventory:
+                qty = int(input(f"Wie viele {item_choice} möchten Sie verkaufen? "))
+                if qty <= inventory[item_choice]["qty"]:
+                    inventory[item_choice]["qty"] -= qty
+                    Purse["Gold"] += prices[item_choice] * qty
+                    print(f"Sie haben {qty} {item_choice} verkauft.")
+                    print(f"Ihr neuer Kontostand beträgt {Purse['Gold']} Gold.")
+                else:
+                    print(f"Sie haben nicht genug {item_choice}.")
+            else:
+                print("Das ist kein gültiger Artikel.")
+        elif choice == "3":
+            break
+        else:
+            print("Das ist keine gültige Option.")
+
+
+
+shop()
 
 # This function takes an inventory dictionary as its input and prints the contents of the inventory in a formatted manner.
 def print_inventory(inventory):
@@ -73,7 +138,6 @@ def print_inventory(inventory):
 if __name__ == "__main__":
     print_inventory(inventory)
 
-import pygame
 
 def zelda_themesound(start_time=0):
     pygame.init()
@@ -177,82 +241,5 @@ def Copyrigtname():
     copyright = u"\u00A9" # Erstellt das Copyright-Zeichen
     print(copyright + " " + name)# Gibt das Ergebnis aus
 
-inventory = {
-    "weapons": {"sword": {"qty": 2, "atk": 10}, "axe": {"qty": 1, "atk": 12}, "mace": {"qty": 1, "atk": 15}},
-    "food": {"potion": {"qty": 5, "health_bonus": 50}, "fish": {"qty": 2, "health_bonus": 20}},
-    "defense": {"shield": {"qty": 1, "def": 5}, "armor": {"qty": 1, "def": 10}},
-    "items": {"Map": {"qty": 1}, "Apple": {"qty": 5, "health_bonus": 10}, "Grilled Fish": {"qty": 2, "health_bonus": 30}, "Goblin Shield": {"qty": 1, "def": 8}},
-
-}
-
-Purse = 100
-
-
-prices = {
-    "sword": 20,
-    "axe": 25,
-    "mace": 30,
-    "potion": 10,
-    "fish": 5,
-    "shield": 15,
-    "armor": 30,
-    "Map": 5,
-    "Apple": 2,
-    "Grilled Fish": 10,
-    "Goblin Shield": 20
-} # prices of items in the shop
-
-def shop():
-    print("Willkommen im Shop!")
-    while True:
-        print("Was möchten Sie tun?")
-        print("1. Kaufen")
-        print("2. Verkaufen")
-        print("3. Verlassen")
-        choice = input(">> ")
-        if choice == "1":
-            print("Was möchten Sie kaufen?")
-            for item in prices:
-                print(f"{item}: {prices[item]}")
-            item_choice = input(">> ")
-            if item_choice in prices:
-                if inventory[item_choice]["qty"] > 0:
-                    if Purse["Gold"] >= prices[item_choice]:
-                        inventory[item_choice]["qty"] -= 1
-                        Purse["Gold"] -= prices[item_choice]
-                        print(f"Sie haben {item_choice} gekauft.")
-                        print(f"Ihr neuer Kontostand beträgt {Purse['Gold']} Gold.")
-                    else:
-                        print("Sie haben nicht genug Gold.")
-                else:
-                    print(f"{item_choice} ist ausverkauft.")
-            else:
-                print("Das ist kein gültiger Artikel.")
-        elif choice == "2":
-            print("Was möchten Sie verkaufen?")
-            for item in inventory:
-                if inventory[item]["qty"] > 0:
-                    print(f"{item}: {inventory[item]['qty']}")
-            item_choice = input(">> ")
-            if item_choice in inventory:
-                qty = int(input(f"Wie viele {item_choice} möchten Sie verkaufen? "))
-                if qty <= inventory[item_choice]["qty"]:
-                    inventory[item_choice]["qty"] -= qty
-                    Purse["Gold"] += prices[item_choice] * qty
-                    print(f"Sie haben {qty} {item_choice} verkauft.")
-                    print(f"Ihr neuer Kontostand beträgt {Purse['Gold']} Gold.")
-                else:
-                    print(f"Sie haben nicht genug {item_choice}.")
-            else:
-                print("Das ist kein gültiger Artikel.")
-        elif choice == "3":
-            break
-        else:
-            print("Das ist keine gültige Option.")
-
-
-
-shop()
-    
 
 
