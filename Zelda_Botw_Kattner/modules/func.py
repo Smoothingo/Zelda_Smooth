@@ -67,7 +67,7 @@ shop_inventory = {
 purse = {"💰 Rupees": 30}
 
 def show_balance(purse):
-    print(f"You have {purse['💰 Rupees']} left.")
+    print(f"You're total Rupees are {purse['💰 Rupees']}")
 
 def buy_item(item, shop_inventory, purse):
     excluded_items = ["map"]
@@ -191,7 +191,7 @@ def shop_interact(shop_inventory, purse):
    # show_inventory(shop_inventory)
 def print_shop_inventory(shop_inventory):
     # print the header for the inventory
-    print("          Inventory:")
+    print("          Shop Items:")
     print("================================")
     # print the weapons section of the inventory
     print("🗡 Weapons:")
@@ -233,7 +233,7 @@ def print_shop_inventory(shop_inventory):
 # This function takes an inventory dictionary as its input and prints the contents of the inventory in a formatted manner.
 def print_inventory(inventory):
     # print the header for the inventory
-    print("          Inventory:")
+    print("          Personal Inventory:")
     print("================================")
     # print the weapons section of the inventory
     print("🗡 Weapons:")
