@@ -21,12 +21,11 @@ def bsep_line():
 
 
 inventory = {
-    "weapons": {"sword": {"qty": 2, "atk": 10}, "axe": {"qty": 1, "atk": 12}, "mace": {"qty": 1, "atk": 15}},
-    "food": {"potion": {"qty": 5, "health_bonus": 50}, "fish": {"qty": 2, "health_bonus": 20}},
-    "defense": {"shield": {"qty": 1, "def": 5}, "armor": {"qty": 1, "def": 10}},
-    "items": {"Map": {"qty": 1}, "Apple": {"qty": 5, "health_bonus": 10}, "Grilled Fish": {"qty": 2, "health_bonus": 30}, "Goblin Shield": {"qty": 1, "def": 8}}
-}
-
+     "weapons": {"sword": {"qty": 2, "atk": 10}, "axe": {"qty": 1, "atk": 12}, "mace": {"qty": 1, "atk": 15}},
+     "food": {"potion": {"qty": 5, "health_bonus": 50}, "fish": {"qty": 2, "health_bonus": 20}},
+     "defense": {"shield": {"qty": 1, "def": 5}, "armor": {"qty": 1, "def": 10}},
+     "items": {"Map": {"qty": 1}, "Apple": {"qty": 5, "health_bonus": 10}, "Grilled Fish": {"qty": 2, "health_bonus": 30}, "Goblin Shield": {"qty": 1, "def": 8}}
+ }
 # This function takes an inventory dictionary as its input and prints the contents of the inventory in a formatted manner.
 def print_inventory(inventory):
     # print the header for the inventory
@@ -67,8 +66,8 @@ def print_inventory(inventory):
             # print the name of the item and its quantity
             print(f"\t• {k}: {v['qty']}")
 
-#if __name__ == "__main__":
-    #print_inventory(inventory)
+if __name__ == "__main__":
+    print_inventory(inventory)
 
 import pygame
 
