@@ -171,7 +171,7 @@ def zelda_portrait():
 
 # main game loop
 
-
+#www
 def Copyrigtname():
     name = "Markus Ernst Kattner"
     copyright = u"\u00A9" # Erstellt das Copyright-Zeichen
