@@ -93,7 +93,6 @@ def shop():
 
 
 
-shop()
 
 # This function takes an inventory dictionary as its input and prints the contents of the inventory in a formatted manner.
 def print_inventory(inventory):
