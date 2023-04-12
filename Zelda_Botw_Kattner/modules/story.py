@@ -158,9 +158,8 @@ ChoiceA = {
     "Kap5": {"Q1A": "You travel to the Goronen Village and convince the village leader to help you try defeating the Fire Titan Vah Rudania.",
              "Q2A": "You go and hunt down a rare monster that can only be found near the Zora Village. After you defeated the Monster you head to a Trading outpost to sell coins and buy better Equipment at a nearby Blacksmith",
              "Q2Ab": "After you defeated the Monster you head to a Trading outpost to sell coins and buy better Equipment at a nearby Blacksmith"},
-    "Kap6": {"Text": "You defeated the Titan Vah Rudania and learned about the Thunder Titan Vah Naboris from the Gerudo people. They are unable to defeat it due to a curse, but they offer to help you if you can break the curse. What do you do?",
-             "Q1": "[1]Accept the Gerudo's help and work together to break the curse and defeat Vah Naboris",
-             "Q2": "[2]Refuse the Gerudo's help and try to defeat Vah Naboris on your own",
-             "Q3": "[3]Check your status",
-             "Q4": "[4]Check the map"},
+    "Kap6": {"Q1A": "[1]Accept the Gerudo's help and work together to break the curse and defeat Vah Naboris",
+            "Q2AAA": "[4]Check the map"},
+    "Kap7": {"Q1A": "You accept the Gerudo's help and work together to break the curse and defeat Vah Naboris.",
+             
 } 
