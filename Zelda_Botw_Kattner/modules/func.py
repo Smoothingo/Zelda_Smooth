@@ -28,6 +28,7 @@ def beta_version_sorry():
     print("I wish you a nice day and a good time.")
     print("This is my Github account for the repository of this project: https://github.com/Smoothingo/Zelda_Smooth")
     sys.exit()
+
 personal_inventory = {
     "weapons": {
     },
