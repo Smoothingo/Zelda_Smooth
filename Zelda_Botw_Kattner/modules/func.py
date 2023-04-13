@@ -25,7 +25,7 @@ def beta_version_sorry():
     print("Sorry, this feature is not available because im a lazy man and needed to play other games.")
     print("Im sorry to disappoint you, but use the time that you initially wanted to play in learning the German language.")
     print("I wish you a nice day and a good time.")
-    sys.exit
+    
 personal_inventory = {
     "weapons": {
     },

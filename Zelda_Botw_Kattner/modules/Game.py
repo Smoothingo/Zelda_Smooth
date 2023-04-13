@@ -123,11 +123,12 @@ def Kapitel4():
         if choice == "1":
             bsep_line()
             print(ChoiceA["Kap4"]["Q1A"]) 
-            Kapitel4()
+            beta_version_sorry()
         elif choice == "2":
             bsep_line()
             print(ChoiceA["Kap4"]["Q2A"])
             beta_version_sorry()
+            sys.exit()
         elif choice == "3":
             bsep_line()
             print(ChoiceA["Kap4"]["Q2A"])
@@ -143,7 +144,7 @@ def Kapitel4():
         elif choice == "6":
             bsep_line()
             print("You go find a shop nearby")
-            shop_interact()
+            shop_interact(shop_inventory , purse)
             Kapitel4()
         else:
             print("Invalid choice. Please try again.")
