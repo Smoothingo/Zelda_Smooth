@@ -25,6 +25,7 @@ def beta_version_sorry():
     print("Sorry, this feature is not available in the beta version. 🚫")
     print("Im sorry to disappoint you, but use the time that you initially wanted to play in learning the German language.")
     print("I wish you a nice day and a good time.")
+    print("https://github.com/Smoothingo/Zelda_Smooth")
     sys.exit()
 personal_inventory = {
     "weapons": {
