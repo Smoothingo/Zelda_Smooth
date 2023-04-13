@@ -1,4 +1,4 @@
-import PyInstaller
+
 
 item_symbols = {
     "sword": "\U0001F5E1",
