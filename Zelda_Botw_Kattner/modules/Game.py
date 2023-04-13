@@ -128,7 +128,6 @@ def Kapitel4():
             bsep_line()
             print(ChoiceA["Kap4"]["Q2A"])
             beta_version_sorry()
-            sys.exit()
         elif choice == "3":
             bsep_line()
             print(ChoiceA["Kap4"]["Q2A"])
