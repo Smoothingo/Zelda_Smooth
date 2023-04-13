@@ -117,7 +117,8 @@ def Kapitel4():
         print(QandA["Kap4"]['Q3'])
         print(QandA["Kap4"]['Q4'])
         print(QandA["Kap4"]['Q5'])
-        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+        print(QandA["Kap4"]['Q6'])
+        choice = input("Enter your choice (1, 2, 3, 4, 5 or 6): ")
 
         if choice == "1":
             bsep_line()
@@ -138,7 +139,7 @@ def Kapitel4():
         elif choice == "5":
             bsep_line()
             zeldamap()
-            Kapitel2()
+            Kapitel4()
         elif choice == "6":
             bsep_line()
             print("You go find a shop nearby")
