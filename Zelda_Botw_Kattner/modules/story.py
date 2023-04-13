@@ -28,7 +28,9 @@ QandA = {
              "Q2": "[2]Requesting some items or coins as an equal exchange for saving her village",
              "Q3": "[3]Don't help her and go off into the wild to find other adventures waiting for you",
              "Q4": "[4]Check your status",
-             "Q5": "[5]Check the map"},
+             "Q5": "[5]Check the map",
+             "Q6": "[6]Go to a shop and buy some items"
+             },
 
     "Kap5": {"Text": "You defeated the Titan Vah Ruta and now realized the consequences of Ganon and his evil doing. The village leader also told you about the fire Titan Vah Rudania. ",
              "Q1": "[1]Going to help the people that suffer like the Zora villagers from the Fire Titan Vah Rudania",

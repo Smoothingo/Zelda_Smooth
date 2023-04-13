@@ -49,12 +49,10 @@ def Kapitel2():
             bsep_line()
             print(ChoiceA["Kap2"]["Q1A"])
             #inventory.extend(["Map","Apple","Grilled Fish","Goblin Sword","Goblin Shield"])
-            personal_inventory.update({
-                "weapons": {"Goblin Sword": {"qty": 1, "attack": 8}},
-                "food": {"Apple": {"qty": 5, "health_bonus": 20}, "Grilled Fish": {"qty": 5, "health_bonus": 20}},
-                "defense": {"Goblin Shield": {"qty": 1, "defense": 8}},
-                "items": {"Map": {"qty": 1}}
-            })
+            personal_inventory["weapons"].update({"Goblin Sword": {"qty": 1, "atk": 10, "price": 7}})
+            personal_inventory["food"].update({"Apple": {"qty": 5, "health_bonus": 10, "price": 1}})
+            personal_inventory["defense"].update({"Goblin Shield": {"qty": 1, "def": 10, "price": 10}})
+            personal_inventory["items"].update({"map": {"qty": 1, "health_bonus": 0, "price": 0}})
             Kapitel3()
         elif choice == "2":
             bsep_line()
@@ -63,8 +61,7 @@ def Kapitel2():
         elif choice == "3":
             bsep_line()
             print(ChoiceA["Kap2"]["Q3A"])
-            personal_inventory.update({
-                "items": {"Map"}})
+            personal_inventory["items"].update({"map": {"qty": 1, "health_bonus": 0, "price": 0}})
             Kapitel2()
         elif choice == "4":
             bsep_line()
@@ -129,11 +126,11 @@ def Kapitel4():
         elif choice == "2":
             bsep_line()
             print(ChoiceA["Kap4"]["Q2A"])
-            Kapitel5()
+            beta_version_sorry()
         elif choice == "3":
             bsep_line()
             print(ChoiceA["Kap4"]["Q2A"])
-            Kapitel1()
+            death()
         elif choice == "4":
             bsep_line()
             print(ChoiceA["Kap4"]["Q2A"])
@@ -142,6 +139,11 @@ def Kapitel4():
             bsep_line()
             zeldamap()
             Kapitel2()
+        elif choice == "6":
+            bsep_line()
+            print("You go find a shop nearby")
+            shop_interact()
+            Kapitel4()
         else:
             print("Invalid choice. Please try again.")
 
@@ -210,6 +212,584 @@ def Kapitel6():
             bsep_line()
             zeldamap()
             Kapitel2()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel7():
+    while True:
+        print(QandA["Kap7"]['Text'])
+        ssep_line()
+        print(QandA["Kap7"]['Q1'])
+        print(QandA["Kap7"]['Q2'])
+        print(QandA["Kap7"]['Q3'])
+        print(QandA["Kap7"]['Q4'])
+        print(QandA["Kap7"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap7"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap7"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap7"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap7"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel8():
+    while True:
+        print(QandA["Kap8"]['Text'])
+        ssep_line()
+        print(QandA["Kap8"]['Q1'])
+        print(QandA["Kap8"]['Q2'])
+        print(QandA["Kap8"]['Q3'])
+        print(QandA["Kap8"]['Q4'])
+        print(QandA["Kap8"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap8"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap8"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap8"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap8"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel9():
+    while True:
+        print(QandA["Kap9"]['Text'])
+        ssep_line()
+        print(QandA["Kap9"]['Q1'])
+        print(QandA["Kap9"]['Q2'])
+        print(QandA["Kap9"]['Q3'])
+        print(QandA["Kap9"]['Q4'])
+        print(QandA["Kap9"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap9"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap9"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap9"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap9"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel10():
+    while True:
+        print(QandA["Kap10"]['Text'])
+        ssep_line()
+        print(QandA["Kap10"]['Q1'])
+        print(QandA["Kap10"]['Q2'])
+        print(QandA["Kap10"]['Q3'])
+        print(QandA["Kap10"]['Q4'])
+        print(QandA["Kap10"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap10"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap10"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap10"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap10"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel9():
+    while True:
+        print(QandA["Kap8"]['Text'])
+        ssep_line()
+        print(QandA["Kap8"]['Q1'])
+        print(QandA["Kap8"]['Q2'])
+        print(QandA["Kap8"]['Q3'])
+        print(QandA["Kap8"]['Q4'])
+        print(QandA["Kap8"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap8"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap8"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap8"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap8"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel10():
+    while True:
+        print(QandA["Kap9"]['Text'])
+        ssep_line()
+        print(QandA["Kap9"]['Q1'])
+        print(QandA["Kap9"]['Q2'])
+        print(QandA["Kap9"]['Q3'])
+        print(QandA["Kap9"]['Q4'])
+        print(QandA["Kap9"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap9"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap9"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap9"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap9"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel11():
+    while True:
+        print(QandA["Kap11"]['Text'])
+        ssep_line()
+        print(QandA["Kap11"]['Q1'])
+        print(QandA["Kap11"]['Q2'])
+        print(QandA["Kap11"]['Q3'])
+        print(QandA["Kap11"]['Q4'])
+        print(QandA["Kap11"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap11"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap11"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap11"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap11"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel12():
+    while True:
+        print(QandA["Kap12"]['Text'])
+        ssep_line()
+        print(QandA["Kap12"]['Q1'])
+        print(QandA["Kap12"]['Q2'])
+        print(QandA["Kap12"]['Q3'])
+        print(QandA["Kap12"]['Q4'])
+        print(QandA["Kap12"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap12"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap12"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap12"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap12"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel13():
+    while True:
+        print(QandA["Kap13"]['Text'])
+        ssep_line()
+        print(QandA["Kap13"]['Q1'])
+        print(QandA["Kap13"]['Q2'])
+        print(QandA["Kap13"]['Q3'])
+        print(QandA["Kap13"]['Q4'])
+        print(QandA["Kap13"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap13"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap13"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap13"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap13"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel14():
+    while True:
+        print(QandA["Kap14"]['Text'])
+        ssep_line()
+        print(QandA["Kap14"]['Q1'])
+        print(QandA["Kap14"]['Q2'])
+        print(QandA["Kap14"]['Q3'])
+        print(QandA["Kap14"]['Q4'])
+        print(QandA["Kap14"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap14"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap14"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap14"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap14"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel15():
+    while True:
+        print(QandA["Kap15"]['Text'])
+        ssep_line()
+        print(QandA["Kap15"]['Q1'])
+        print(QandA["Kap15"]['Q2'])
+        print(QandA["Kap15"]['Q3'])
+        print(QandA["Kap15"]['Q4'])
+        print(QandA["Kap15"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap15"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap15"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap15"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap15"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel16():
+    while True:
+        print(QandA["Kap16"]['Text'])
+        ssep_line()
+        print(QandA["Kap16"]['Q1'])
+        print(QandA["Kap16"]['Q2'])
+        print(QandA["Kap16"]['Q3'])
+        print(QandA["Kap16"]['Q4'])
+        print(QandA["Kap16"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap16"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap16"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap16"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap16"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel17():
+    while True:
+        print(QandA["Kap17"]['Text'])
+        ssep_line()
+        print(QandA["Kap17"]['Q1'])
+        print(QandA["Kap17"]['Q2'])
+        print(QandA["Kap17"]['Q3'])
+        print(QandA["Kap17"]['Q4'])
+        print(QandA["Kap17"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap17"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap17"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap17"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap17"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel18():
+    while True:
+        print(QandA["Kap18"]['Text'])
+        ssep_line()
+        print(QandA["Kap18"]['Q1'])
+        print(QandA["Kap18"]['Q2'])
+        print(QandA["Kap18"]['Q3'])
+        print(QandA["Kap18"]['Q4'])
+        print(QandA["Kap18"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap18"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap18"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap18"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap18"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel19():
+    while True:
+        print(QandA["Kap19"]['Text'])
+        ssep_line()
+        print(QandA["Kap19"]['Q1'])
+        print(QandA["Kap19"]['Q2'])
+        print(QandA["Kap19"]['Q3'])
+        print(QandA["Kap19"]['Q4'])
+        print(QandA["Kap19"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap19"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap19"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap19"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap19"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel20():
+    while True:
+        print(QandA["Kap20"]['Text'])
+        ssep_line()
+        print(QandA["Kap20"]['Q1'])
+        print(QandA["Kap20"]['Q2'])
+        print(QandA["Kap20"]['Q3'])
+        print(QandA["Kap20"]['Q4'])
+        print(QandA["Kap20"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap20"]["Q1A"]) 
+            Kapitel4()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap20"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap20"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap20"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
+        else:
+            print("Invalid choice. Please try again.")
+
+def Kapitel21():
+    while True:
+        print(QandA["Kap21"]['Text'])
+        ssep_line()
+        print(QandA["Kap21"]['Q1'])
+        print(QandA["Kap21"]['Q2'])
+        print(QandA["Kap21"]['Q3'])
+        print(QandA["Kap21"]['Q4'])
+        print(QandA["Kap21"]['Q5'])
+        choice = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+        if choice == "1":
+            bsep_line()
+            print(ChoiceA["Kap21"]["Q1A"]) 
+            Kapitel1()
+        elif choice == "2":
+            bsep_line()
+            print(ChoiceA["Kap21"]["Q2A"])
+            Kapitel1()
+        elif choice == "3":
+            bsep_line()
+            print(ChoiceA["Kap21"]["Q2A"])
+            Kapitel1()
+        elif choice == "4":
+            bsep_line()
+            print(ChoiceA["Kap21"]["Q2A"])
+            print_status()
+        elif choice == "5":
+            bsep_line()
+            zeldamap()
+            Kapitel3()
         else:
             print("Invalid choice. Please try again.")
 
