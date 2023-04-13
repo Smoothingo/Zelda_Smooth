@@ -1,7 +1,7 @@
 from modules.Game import *
 import pygame
 import os
-
+import sys
 
 health = 10
 defense = 10
@@ -23,23 +23,14 @@ def bsep_line():
 
 personal_inventory = {
     "weapons": {
-        "sword": {"qty": 2, "atk": 10, "price": 15},
-        "axe": {"qty": 1, "atk": 12, "price": 15},
-        "mace": {"qty": 1, "atk": 15, "price": 15},
     },
     "food": {
-        "potion": {"qty": 5, "health_bonus": 50, "price": 15},
-        "fish": {"qty": 2, "health_bonus": 20, "price": 15},
+    
     },
     "defense": {
-        "shield": {"qty": 1, "def": 5, "price": 10},
-        "armor": {"qty": 1, "def": 10, "price": 11},
+        
     },
     "items": {
-        "map": {"qty": 1, "price": 0},
-        "apple": {"qty": 5, "health_bonus": 10, "price": 5},
-        "grilled_fish": {"qty": 2, "health_bonus": 30, "price": 15},
-        "goblin_shield": {"qty": 1, "def": 8, "price": 15},
     },
 }
 shop_inventory = {
@@ -273,15 +264,13 @@ def print_personal_inventory(personal_inventory):
 if __name__ == "__main__":
     print_personal_inventory(personal_inventory)
 
+relativ = 'Sounds\\zeldatheme.mp3'
+absolut = os.path.abspath(os.path.join(sys.path[0], relativ))                            ##Credit Dragoljub Mitrovic
 
-def zelda_themesound(start_time=0):
+def zelda_themesound():
     pygame.init()
-    pygame.mixer.init()
-    sound_file = "Zelda_Botw_Kattner\Sounds\zeldatheme.mp3"
-    pygame.mixer.music.load(sound_file)
-    pygame.mixer.music.play(-1, start_time)
-    while pygame.mixer.music.get_busy():
-        continue
+    pygame.mixer.music.load("C:\\Users\\Markus\\Desktop\\Zelda_BOTW\\Zelda_Botw_Kattner\\Sounds\\zeldatheme.mp3")
+    pygame.mixer.music.play()
 
 
 def zeldamap():
@@ -333,7 +322,9 @@ def print_status():
     
 
 # Define function to reduce the player's health by an amount of damage inflicted.
-
+def death():
+        print("You have died. Game Over.")
+        sys.exit()
 
 
 # zelda portrait

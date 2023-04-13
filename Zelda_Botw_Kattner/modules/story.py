@@ -158,7 +158,10 @@ ChoiceA = {
     "Kap5": {"Q1A": "You travel to the Goronen Village and convince the village leader to help you try defeating the Fire Titan Vah Rudania.",
              "Q2A": "You go and hunt down a rare monster that can only be found near the Zora Village. After you defeated the Monster you head to a Trading outpost to sell coins and buy better Equipment at a nearby Blacksmith",
              "Q2Ab": "After you defeated the Monster you head to a Trading outpost to sell coins and buy better Equipment at a nearby Blacksmith"},
-    "Kap6": {"Q1A": "[1]Accept the Gerudo's help and work together to break the curse and defeat Vah Naboris",
-            "Q2AAA": "[4]Check the map"},
-    "Kap7": {"Q1A": "You accept the Gerudo's help and work together to break the curse and defeat Vah Naboris.",}
+    "Kap6": {"Q1A": "Accept the Gerudo's help and work together to break the curse and defeat Vah Naboris",
+            "Q2A": "Check the map"},
+    "Kap7": {"Q1A": "You accept the Gerudo's help and work together to break the curse and defeat Vah Naboris.",
+             "Q2A": "You ignore the Gerudo and continue your journey alone."},
+    "Kap8": {"Q1A": "You accept the Gerudo's help and work together to break the curse and defeat Vah Naboris.",
+             "Q2A": "You ignore the Gerudo and continue your journey alone."},
 }

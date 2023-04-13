@@ -13,7 +13,6 @@ def Kapitel1():
         print(QandA["Kap1"]['Q2'])
         print(QandA["Kap1"]['Q3'])
         print(QandA["Kap1"]['Q4'])
-        shop_interact(shop_inventory, purse)
         choice = input("Enter your choice (1, 2, 3, 4): ")
 
         if choice == "1":
@@ -50,7 +49,7 @@ def Kapitel2():
             bsep_line()
             print(ChoiceA["Kap2"]["Q1A"])
             #inventory.extend(["Map","Apple","Grilled Fish","Goblin Sword","Goblin Shield"])
-            inventory.update({
+            personal_inventory.update({
                 "weapons": {"Goblin Sword": {"qty": 1, "attack": 8}},
                 "food": {"Apple": {"qty": 5, "health_bonus": 20}, "Grilled Fish": {"qty": 5, "health_bonus": 20}},
                 "defense": {"Goblin Shield": {"qty": 1, "defense": 8}},
@@ -60,17 +59,17 @@ def Kapitel2():
         elif choice == "2":
             bsep_line()
             print(ChoiceA["Kap2"]["Q2A"])
-            Kapitel1()
+            death()
         elif choice == "3":
             bsep_line()
             print(ChoiceA["Kap2"]["Q3A"])
-            inventory.update({
+            personal_inventory.update({
                 "items": {"Map"}})
             Kapitel2()
         elif choice == "4":
             bsep_line()
             print(ChoiceA["Kap2"]["Q4A"])
-            Kapitel1()
+            death()
         elif choice == "5":
             bsep_line()
             print_status()
@@ -253,8 +252,6 @@ def Start():
         print("You may play the game now. Im proud that we have a Teacher who knows what they are doing at this school.")
         time.sleep(8)
         clear()
-        sound_thread = threading.Thread(target=zelda_themesound, args=(10,))
-        sound_thread.start()
         time.sleep(5)
         zelda_portrait()
         Copyrigtname()
