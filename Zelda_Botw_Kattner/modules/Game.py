@@ -807,7 +807,7 @@ def Start():
         if choice == "1":
             break
         elif choice == "2":
-            print("You are a Failier and you will never be able to play this Game")
+            print("You are a Failure and you will never be able to play this Game")
             print("Good Bye")
             sys.exit()
         else:

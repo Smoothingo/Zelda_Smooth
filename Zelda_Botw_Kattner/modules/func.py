@@ -22,7 +22,7 @@ def bsep_line():
     print("═"*100)
 
 def beta_version_sorry():
-    print("Sorry, this feature is not available because im a lazy man and needed to play other games.")
+    print("Sorry, this feature is not available in the beta version. 🚫")
     print("Im sorry to disappoint you, but use the time that you initially wanted to play in learning the German language.")
     print("I wish you a nice day and a good time.")
     sys.exit()
