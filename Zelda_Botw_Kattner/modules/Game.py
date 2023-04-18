@@ -4,6 +4,7 @@ import sys
 import threading
 import webbrowser
 import time
+import playsound 
 
 def Kapitel1():
     while True:
@@ -835,6 +836,16 @@ def Start():
         clear()
         time.sleep(5)
         zelda_portrait()
+        def play_music(file_name):
+            dir_path = os.path.dirname(os.path.abspath(__file__))
+            file_path = os.path.join(dir_path, "zeldatheme.mp3")
+            pygame.mixer.init()
+            pygame.mixer.music.load(file_path)
+            pygame.mixer.music.play(-1)
+            while pygame.mixer.music.get_busy():
+                pygame.time.Clock().tick(10)
+
+        play_music("zeldatheme.mp3")
         Copyrigtname()
         input("Press Enter to start your legendary Adventure....")
         first_message = "Welcome to The Legend of Zelda: Breath of the Wild text adventure"

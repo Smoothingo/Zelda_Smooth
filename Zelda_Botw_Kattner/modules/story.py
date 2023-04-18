@@ -182,6 +182,6 @@ ChoiceA = {
              "Q2A": "You just buy some stuff at the Village and then head out. But then you hear the Voice of Zelda in your head saying: 'Help the people and defeat the Titan' and then get put back in time and stand before the Rito Village ",
              "Q3A": "You check your status",
              "Q4A": "You check the map"},
-    "Kap12":{"Q1A":"You take on a journey and in order to get to Ganons Castle because you have defeated all the Titans",
-             }
+    "Kap12":{"Q1A": "You take on a journey and in order to get to Ganons Castle because you have defeated all the Titans",
+             "Q2A": "You chill your balls and explore the nice Area around. You meet a Trading Outpost who are trying to sell you something. After That you go and make your way to Ganon"}
 }      
