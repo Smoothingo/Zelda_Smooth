@@ -51,8 +51,8 @@ QandA = {
              "Q4": "[4]Check the map"},
 
     "Kap8": {"Text": "You arrive at the Gerudo Desert, where the second Titan, Vah Naboris, is located. The Gerudo people, however, are hostile towards men. What do you do?",
-             "Q1": "[1]Try to find a way to sneak into Gerudo Town",
-             "Q2": "[2]Ask for help from the Gorons or Zoras",
+             "Q1": "[1]Helping a Gerudo to Win their Trust and Defeat Vah Naboris",
+             "Q2": "[2]Ignore the Village because they arent letting you to their Chief instantly and Adventure on your own",
              "Q3": "[3]Fight your way through the Gerudo guards",
              "Q4": "[4]Check your status",
              "Q5": "[5]Check the map"},
@@ -125,7 +125,9 @@ QandA = {
               "Q2": "[2]Look for another way into the castle",
               "Q3": "[3]Return to an earlier save and try a different approach",
               "Q4": "[4]Check your status",
-              "Q5": "[5]Check the map"},
+              "Q5": "[5]Check the map",},
+
+              
 
     "Kap20": {"Text": "After finding and defeating Ganon's four Blights, the barrier around Hyrule Castle is finally down. You make your way inside the castle and confront Calamity Ganon. What do you do?",
               "Q1": "[1]Use your sword to defeat him head-on",
@@ -164,6 +166,22 @@ ChoiceA = {
             "Q2A": "Check the map"},
     "Kap7": {"Q1A": "You accept the Gerudo's help and work together to break the curse and defeat Vah Naboris.",
              "Q2A": "You ignore the Gerudo and continue your journey alone."},
-    "Kap8": {"Q1A": "You accept the Gerudo's help and work together to break the curse and defeat Vah Naboris.",
-             "Q2A": "You ignore the Gerudo and continue your journey alone."},
-}
+    "Kap8": {"Q1A": "You accept to help of a Gerudo and work together to break the curse and defeat Vah Naboris.",
+             "Q2A": "You ignore the Gerudo and continue your journey alone.",
+             "Q3A": "You try fighting them but die because the special Guards are way to strong for you"},
+    "Kap9": {"Q1A": "You fight against them and its really difficult but you manage to defeat them and go to the Titan",
+             "Q2A": "You try to sneak past them but they see you and attack you. You are defeated.",
+             "Q3A": "You ask for help from the Gerudo and they help you talk with the assasins and let you trough after giving them 20 Rupees",
+             "Q4A": "You check your status",
+             "Q5A": "You check the map",},
+    "Kap10":{"Q1A": " You go on a long adventure and are heading to go to the next Village where the final Titan is located",
+             "Q2A": "You take a break and get a Massage from the Gerudo towm People wich costs 10 Rupees",
+             "Q3A": "You check your status",
+             "Q4A": "You check the map"},
+    "Kap11":{"Q1A": "You help the Rito people defeat the Titan and they even give you 100 Ruppes for helping them",
+             "Q2A": "You just buy some stuff at the Village and then head out. But then you hear the Voice of Zelda in your head saying: 'Help the people and defeat the Titan' and then get put back in time and stand before the Rito Village ",
+             "Q3A": "You check your status",
+             "Q4A": "You check the map"},
+    "Kap12":{"Q1A":"You take on a journey and in order to get to Ganons Castle because you have defeated all the Titans",
+             }
+}      
