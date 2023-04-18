@@ -335,7 +335,7 @@ def death():
         sys.exit()
 
 
-# zelda portrait
+# zelda portrait ( https://www.asciiart.eu/video-games/zelda )
 def zelda_portrait():
     print("             _______")
     print("        ..-'`       ````---.")
