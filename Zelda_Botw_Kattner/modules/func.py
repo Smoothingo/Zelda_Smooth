@@ -1,4 +1,3 @@
-from modules.Game import *
 import pygame
 import os
 import sys
