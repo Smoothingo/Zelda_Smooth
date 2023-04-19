@@ -1,6 +1,3 @@
-from modules.func import *
-from modules.Game import *
-
 
 QandA = {
     "Kap1":  {"Text": "You look around the room and see an exit. What do you do?", 
