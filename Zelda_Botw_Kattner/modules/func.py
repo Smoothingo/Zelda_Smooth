@@ -1,4 +1,5 @@
 from modules.Game import *
+import playsound
 import pygame
 import os
 import sys
@@ -256,16 +257,24 @@ def print_personal_inventory(personal_inventory):
             # print the name of the item and its quantity
             print(f"\t• {k}: {v['qty']}")
 
+
+
+                         ##Credit Dragoljub Mitrovic
+
+
+import os
+from playsound import playsound
+
+def play_music(file_name):
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    file_path = os.path.join(dir_path, "Sounds", file_name)
+    while True:
+        playsound(file_path)
+
 if __name__ == "__main__":
-    print_personal_inventory(personal_inventory)
+    play_music("zeldatheme.mp3")
 
-relativ = 'Sounds\\zeldatheme.mp3'
-absolut = os.path.abspath(os.path.join(sys.path[0], relativ))                            ##Credit Dragoljub Mitrovic
 
-def zelda_themesound():
-    pygame.init()
-    pygame.mixer.music.load("C:\\Users\\Markus\\Desktop\\Zelda_BOTW\\Zelda_Botw_Kattner\\Sounds\\zeldatheme.mp3")
-    pygame.mixer.music.play()
 
 
 def zeldamap():
@@ -322,7 +331,7 @@ def death():
         sys.exit()
 
 
-# zelda portrait
+# zelda portrait ( https://www.asciiart.eu/video-games/zelda )
 def zelda_portrait():
     print("             _______")
     print("        ..-'`       ````---.")
