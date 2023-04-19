@@ -56,7 +56,6 @@ shop_inventory = {
         "armor": {"qty": 1, "def": 10, "price": 11},
     },
     "items": {
-        "map": {"qty": 1, "price": 0},
         "apple": {"qty": 5, "health_bonus": 10, "price": 5},
         "grilled_fish": {"qty": 2, "health_bonus": 30, "price": 15},
         "goblin_shield": {"qty": 1, "def": 8, "price": 15},
@@ -129,19 +128,7 @@ def sell_item(item, shop_personal_inventory, purse):
 
 
 
-def dis_personal_inventory(shop_personal_inventory, category):
-    print(f"{category.capitalize()}:")
-    for item in shop_personal_inventory[category]:
-        qty = shop_personal_inventory[category][item]['qty']
-        price = shop_personal_inventory[category][item]['price']
-        stats = ""
-        if 'atk' in shop_personal_inventory[category][item]:
-            stats += f" ATK: {shop_personal_inventory[category][item]['atk']}"
-        if 'def' in shop_personal_inventory[category][item]:
-            stats += f" DEF: {shop_personal_inventory[category][item]['def']}"
-        if 'health_bonus' in shop_personal_inventory[category][item]:
-            stats += f" HP: {shop_personal_inventory[category][item]['health_bonus']}"
-        print(f"{item.capitalize()}: {qty} available for {price} 💰 per unit.{stats}")
+
         
 
 def shop_interact(shop_personal_inventory, purse):
