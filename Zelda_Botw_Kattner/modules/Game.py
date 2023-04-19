@@ -5,6 +5,7 @@ import webbrowser
 import time
 import pygame
 import os
+import threading
 
 def Kapitel1():
     while True:
@@ -836,17 +837,21 @@ def Start():
         clear()
         time.sleep(5)
         zelda_portrait()
+        # help from here:https://stackoverflow.com/questions/53246933/python-execute-playsound-in-separate-thread
         def play_music(file_name):
-            dir_path = os.path.dirname(os.path.abspath(__file__))
-            file_path = os.path.join(dir_path, "zeldatheme.mp3")
+            dir_path = os.path.dirname(os.path.abspath(__file__))    
+            file_path = os.path.join(dir_path, file_name)
             pygame.mixer.init()
             pygame.mixer.music.load(file_path)
             pygame.mixer.music.play(-1)
-            while pygame.mixer.music.get_busy():
-                pygame.time.Clock().tick(10)
 
-        play_music("zeldatheme.mp3")
-        Copyrigtname()
+        def start_music_thread(file_name):
+            music_thread = threading.Thread(target=play_music, args=(file_name,))
+            music_thread.start()
+
+        start_music_thread("zeldatheme.mp3")
+
+        Copyrigtname()  
         input("Press Enter to start your legendary Adventure....")
         first_message = "Welcome to The Legend of Zelda: Breath of the Wild text adventure"
         sec_message = "You are Link, a hero in the kingdom of Hyrule."
