@@ -1,5 +1,4 @@
 from modules.Game import *
-import playsound
 import pygame
 import os
 import sys
@@ -220,7 +219,7 @@ def print_shop_personal_inventory(shop_personal_inventory):
 # This function takes an personal_inventory dictionary as its input and prints the contents of the personal_inventory in a formatted manner.
 def print_personal_inventory(personal_inventory):
     # print the header for the personal_inventory
-    print("          Personal personal_inventory:")
+    print("          Personal inventory:")
     print("================================")
     # print the weapons section of the personal_inventory
     print("🗡 Weapons:")
@@ -256,26 +255,6 @@ def print_personal_inventory(personal_inventory):
         else:
             # print the name of the item and its quantity
             print(f"\t• {k}: {v['qty']}")
-
-
-
-                         ##Credit Dragoljub Mitrovic
-
-
-import os
-from playsound import playsound
-
-def play_music(file_name):
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    file_path = os.path.join(dir_path, "Sounds", file_name)
-    while True:
-        playsound(file_path)
-
-if __name__ == "__main__":
-    play_music("zeldatheme.mp3")
-
-
-
 
 def zeldamap():
     # initialize Pygame and set window size

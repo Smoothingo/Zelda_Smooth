@@ -1,10 +1,10 @@
-from modules.story import *
-from modules.func import *
+from modules.story import QandA, ChoiceA
+from modules.func import Copyrigtname, clear, sep_line, zelda_portrait, ssep_line, bsep_line, print_status, death, zeldamap, beta_version_sorry, shop_interact, personal_inventory, purse, shop_inventory
 import sys
-import threading
 import webbrowser
 import time
-import playsound 
+import pygame
+import os
 
 def Kapitel1():
     while True:
