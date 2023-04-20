@@ -1,11 +1,9 @@
 from modules.story import QandA, ChoiceA
-from modules.func import play_music, start_music_thread, Copyrigtname, clear, sep_line, zelda_portrait, ssep_line, bsep_line, print_status, death, zeldamap, beta_version_sorry, shop_interact, personal_inventory, purse, shop_inventory
+from modules.func import  start_music_thread, Copyrigtname, clear, sep_line, zelda_portrait, ssep_line, bsep_line, print_status, death, zeldamap, beta_version_sorry, shop_interact, personal_inventory, purse, shop_inventory
 import sys
 import webbrowser
 import time
-import pygame
-import os
-import threading
+
 
 def Kapitel1():
     while True:
