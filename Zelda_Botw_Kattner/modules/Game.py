@@ -169,7 +169,9 @@ def Start():
             print("Invalid Choice. Try Again")
 
     # Intermediate physics question
-    question = "A car of mass 1000 kg is traveling at a velocity of 20 m/s. It applies a force of 500 N in the opposite direction of its velocity for 10 seconds. What is the final velocity of the car? (Assume no external forces acting on the car.)"
+    question = '''A car of mass 1000 kg is traveling at a velocity of 20 m/s. 
+    It applies a force of 500 N in the opposite direction of its velocity for 10 seconds. 
+    What is the final velocity of the car? (Assume no external forces acting on the car.'''
 
     # Define the correct answer
     correct_answer = -30
