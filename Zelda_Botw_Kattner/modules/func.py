@@ -83,8 +83,7 @@ def buy_item(item, shop_personal_inventory, purse):
         print("You can't buy this item! 🚫")
         return False
     item_data = None
-    for category, items in shop_personal_inventory.items():
-        if item in items:
+    for category, items in shop_personal_inventory.items():       #https://stackoverflow.com/questions/66453344/dict-items-function
             item_data = items[item]
             break
     if not item_data:
@@ -105,7 +104,7 @@ def buy_item(item, shop_personal_inventory, purse):
     item_data['qty'] -= qty_to_buy
     if item_data['qty'] == 0:
         del shop_personal_inventory[category][item]                 # https://stackoverflow.com/questions/6146963/when-is-del-useful-in-python
-        if not shop_personal_inventory[category]:
+        if not shop_personal_inventory[category]:                   
             del shop_personal_inventory[category]
     print(f"You bought {qty_to_buy} {item}(s)! 🛍️")
     return True
@@ -114,7 +113,7 @@ def sell_item(item, shop_personal_inventory, purse):
     excluded_items = ["map"]
     if item in excluded_items:
         print("You can't sell this item! 🚫")
-        return False
+        return False                          # ('w', 2 [])
     item_data = None
     for category, items in shop_personal_inventory.items():
         if item in items:
