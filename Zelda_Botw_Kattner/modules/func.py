@@ -318,7 +318,7 @@ def death():
         pygame.mixer.stop()
         time.sleep(1)
         bsep_line()
-        start_music_thread("zeldadeath.mp3")
+        start_music_thread("zeldadeath.mp3")        #https://www.asciiart.eu/mythology/skeletons
         print(''' 	
 
                               ,,..
