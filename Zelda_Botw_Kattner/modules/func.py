@@ -73,7 +73,7 @@ shop_inventory = {
 }
 
 purse = {"💰 Rupees": 30}
-
+# looked a bit there: https://stackoverflow.com/questions/73286001/beating-textbased-game-with-a-full-inventory-of-items
 def show_balance(purse):
     print(f"You're total Rupees are {purse['💰 Rupees']}")
 
