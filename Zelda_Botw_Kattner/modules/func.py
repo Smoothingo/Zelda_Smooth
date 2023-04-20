@@ -104,7 +104,7 @@ def buy_item(item, shop_personal_inventory, purse):
     purse['💰 Rupees'] -= total_price
     item_data['qty'] -= qty_to_buy
     if item_data['qty'] == 0:
-        del shop_personal_inventory[category][item]
+        del shop_personal_inventory[category][item]                 # https://stackoverflow.com/questions/6146963/when-is-del-useful-in-python
         if not shop_personal_inventory[category]:
             del shop_personal_inventory[category]
     print(f"You bought {qty_to_buy} {item}(s)! 🛍️")
