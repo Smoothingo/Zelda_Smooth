@@ -316,6 +316,8 @@ def print_status():
 
 # Define function to reduce the player's health by an amount of damage inflicted.
 def death():
+        pygame.mixer.stop()
+        time.sleep(1)
         bsep_line()
         start_music_thread("zeldadeath.mp3")
         print(''' 	
@@ -367,8 +369,11 @@ $$$$$$$$$$$$*$"          J$'$$$$$& $.             $'   $$$$$$$$$o
                      "$u.    `""""''   ,'
                        `"$Nu..  .,z{p"'
                            `"####""''')
-        time.sleep(0.03)
-        print("You have died. Game Over.")
+        time.sleep(3)
+        deathmessage = "You have died. Game Over."
+        for char in deathmessage:
+            print(char, end='', flush=True)
+            time.sleep(0.03)
         sys.exit()
 
 
