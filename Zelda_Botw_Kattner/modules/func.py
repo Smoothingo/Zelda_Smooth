@@ -316,6 +316,7 @@ def print_status():
 
 # Define function to reduce the player's health by an amount of damage inflicted.
 def death():
+        bsep_line()
         start_music_thread("zeldadeath.mp3")
         print(''' 	
 
