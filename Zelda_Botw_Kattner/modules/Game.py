@@ -1,5 +1,5 @@
 from modules.story import QandA, ChoiceA
-from modules.func import Copyrigtname, clear, sep_line, zelda_portrait, ssep_line, bsep_line, print_status, death, zeldamap, beta_version_sorry, shop_interact, personal_inventory, purse, shop_inventory
+from modules.func import play_music, start_music_thread, Copyrigtname, clear, sep_line, zelda_portrait, ssep_line, bsep_line, print_status, death, zeldamap, beta_version_sorry, shop_interact, personal_inventory, purse, shop_inventory
 import sys
 import webbrowser
 import time
@@ -837,17 +837,7 @@ def Start():
         clear()
         time.sleep(5)
         zelda_portrait()
-        # help from here:https://stackoverflow.com/questions/53246933/python-execute-playsound-in-separate-thread
-        def play_music(file_name):
-            dir_path = os.path.dirname(os.path.abspath(__file__))    
-            file_path = os.path.join(dir_path, file_name)
-            pygame.mixer.init()
-            pygame.mixer.music.load(file_path)
-            pygame.mixer.music.play(-1)
-
-        def start_music_thread(file_name):
-            music_thread = threading.Thread(target=play_music, args=(file_name,))
-            music_thread.start()
+        
 
         start_music_thread("zeldatheme.mp3")
 

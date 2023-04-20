@@ -1,10 +1,21 @@
 import pygame
 import os
 import sys
-
+import threading
+import time
 health = 10
 defense = 10
+# help from here:https://stackoverflow.com/questions/53246933/python-execute-playsound-in-separate-thread
+def play_music(file_name):
+            dir_path = os.path.dirname(os.path.abspath(__file__))    
+            file_path = os.path.join(dir_path, file_name)
+            pygame.mixer.init()
+            pygame.mixer.music.load(file_path)
+            pygame.mixer.music.play(-1)
 
+def start_music_thread(file_name):
+    music_thread = threading.Thread(target=play_music, args=(file_name,))
+    music_thread.start()
 
 # define functions
 def clear():
@@ -305,6 +316,57 @@ def print_status():
 
 # Define function to reduce the player's health by an amount of damage inflicted.
 def death():
+        start_music_thread("zeldadeath.mp3")
+        print(''' 	
+
+                              ,,..
+                            ,@$$$$$.
+                          .,$$$$$$$$i
+                    .,z$""')$$$$$$$$C`^#`-..
+                 ,zF'        `""#*"'       "*o.
+              ,zXe>        u:..        ..      "c
+            ,' zP'    ,:`"          .            "N.
+          ,d",d$   ,'"   ,uB" .,uee..,?R.  ,  .    ^$.
+        ,@P d$"     .:$$$$$$$$$$$$$@$CJN.,"    `     #b
+       z$" d$P    :SM$$$$$$$$$$$$$$$$$$$Nf.           ^$.
+      J$" J$P  , ,@$$$$$$$$$$$$$$$$$$$$$$$$$k.         "$r
+     z$   $$.   ,$$$$$$$$$$$$$$$$$$$$$$$$$$f'   .    .   $b
+    ,$"  $$u,-.x'^""$$$$$$$$$$$$$$$$$$$$$$$$$.        `.  $k
+    $"  :$$$$> 8.   `#$$$$$$$$$$$$$$$$$$$$$"\  d  .    F   $.
+   $P  .$$$$$N `$b.  $$$$$$$$$$$$$$$$$$$$$k.$  $"  :   '   `$
+  {$'  4$$k $$c `*$.,Q$$$$$$$$$$$$$$$$$$$$$$$ ..            $L
+  $P   4$$$$$F:   `"$$$$$$$$$$$$$$$$$$$$$$'`$"     .   ,    `$
+ ,$'  ,$$$$$d$$    '##$$c3$$$$$$$$$$$$$$$$. '      :   L.    $.
+ J$  u$$$$$$$$$.,oed$*$$$$N "#$$$$$$$$$$***$@$N. , $  ,B$$N.,9L
+ $F,$$$$$$$$$$,@*"'  `J$$$$$#h$$$$$$P"`     `"*$$. $4W$' "$$uJF
+ 4$$$$$$$$$$$$F'      $*'`$$RR@$$$$$R        ,' "$d$4"    '$$$R
+,$$$$$$$$$$$$$F     ,'    @$.3$$$$ R>            `$F$  dN.4$$$$.
+$$$$$$$$$$$$*$"          J$'$$$$$& $.             $'   $$$$$$$$$o
+^$$$$$$$$$$B@$$          $P $$$"?N/$k             $r   $$P"*$$$$'
+  $$i  .$$$$"$'         $$ ~R$P '$k^$$,'          $   "'  ,d$$'
+  $$$$ J$$$$ `,'    .,z$P'd.$P   #$. #$$u.       .$  eu. ,d$$$
+  $^$$$$$$$$. `"=+=N#'.,d$M$$'   `$$@s.#$$$u.   ,$C  $$$@$$$"$
+  "  `*$$$$$$bx..        ,M$"     `*$$$b/""$R"*"'d$ ,$$$$P"  '
+  4     "$$k3$9$$B.e.  ,ud$F       `3$$$$b.      ,$,@R$*'    4
+  {       *$$$$$$$b$$@$$$$$L   ,.  ,J$$.'**$$k$NX$"M"'       .
+  $         "$#"  `" {$$$$$$c,z$N.,o$$$$   ,NW$*"'           $
+  $.         ',    `$$$$$$$$$d$$$$$$$$$f ,$e*'               $
+ ,$c         d.     `^$$$$$$$$$$$$$$$$$.u '"                :$.
+ $$$         $\   .,  `"#$$$*$$$$$$$$$$$$ '                 4$F
+ $$"         $ `  k.`.     ``"#`"""'      ,' ,'             `$$
+ `"          $>,  `b.,ce(b:o uz CCLd$4$*F?\,o                "' 
+             $&    $$k'*"$$$$$$#$$$$s$$$$$$ d'
+             $$.,$$$$$$$$,e,$#$.*$`""""'e4 $
+             `$$$$  ^$$\$"$$$$$$$$$$$$$$$.eL
+              $$$"  $$$$$$$e$.$.$$.$e$d$$$$k
+              R`$$  '$$$$$$$$$$$$$$$$$$$$$$P
+              `  $Nc'"$$N3$$$$$$$$$$$$$$$$$'
+                  *$  9$.`@$$$$$$$$$$R$$$#'
+                   `$.  `"*$$$$$$$$$$P'' #
+                     "$u.    `""""''   ,'
+                       `"$Nu..  .,z{p"'
+                           `"####""''')
+        time.sleep(0.03)
         print("You have died. Game Over.")
         sys.exit()
 
