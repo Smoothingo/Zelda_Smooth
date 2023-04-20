@@ -5,14 +5,14 @@ import threading
 import time
 health = 10
 defense = 10
-# help from here:https://stackoverflow.com/questions/53246933/python-execute-playsound-in-separate-thread
+#https://www.pygame.org/docs/
 def play_music(file_name):
             dir_path = os.path.dirname(os.path.abspath(__file__))    
             file_path = os.path.join(dir_path, file_name)
             pygame.mixer.init()
             pygame.mixer.music.load(file_path)
             pygame.mixer.music.play(-1)
-
+#help from here:https://stackoverflow.com/questions/53246933/python-execute-playsound-in-separate-thread
 def start_music_thread(file_name):
     music_thread = threading.Thread(target=play_music, args=(file_name,))
     music_thread.start()
