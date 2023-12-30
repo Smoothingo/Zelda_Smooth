@@ -310,6 +310,11 @@ def print_status():
     print_defense()
     input("Press Enter to continue your Story...")
     bsep_line()
+
+def fightsystem(health, defense, enemy_health, enemy_defense, enemy_attack, enemy_name):
+
+    while True:
+
  
     
 

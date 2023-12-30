@@ -192,7 +192,7 @@ def Start():
         zelda_portrait()
         
 
-        start_music_thread("zeldatheme.mp3")
+        #start_music_thread("zeldatheme.mp3")
 
         Copyrigtname()  
         input("Press Enter to start your legendary Adventure....")
