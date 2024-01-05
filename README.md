@@ -6,7 +6,6 @@ I hope you enjoy it. This code is still in development and i will try to finish 
 
 I will maybe add features every now and then and will try to make a nice fighting system for the Titans and Ganon.
 
-*If your Question is why there a many random files in this whole Folder. The Answer is this is a Schoolprojects and this is the Folder where i dumped all Files that i ever opened or used for this Project pretty much in.*
 
 *Please leave Feedback and Tipps*
 
