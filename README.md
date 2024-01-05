@@ -10,7 +10,7 @@ I will maybe add features every now and then and will try to make a nice fightin
 *Please leave Feedback and Tipps*
 
 # Requirements
-python installed on your Computer plus something where you can execute code. (You can also execute it in your cmd)
+python installed on your Computer + an editor. (You can also execute the python file via cmd)
 
 Pygame -> run "pip install pygame" in your Terminal
 
