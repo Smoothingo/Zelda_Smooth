@@ -12,10 +12,8 @@ I will maybe add features every now and then and will try to make a nice fightin
 # Requirements
 python installed on your Computer + an editor. (You can also execute the python file via cmd)
 
-Pygame -> run "pip install pygame" in your Terminal
-
-You have to have Pip installed in order to do that command
-
+You have to have Pip installed in order to install pygame with the following command:
+    Pygame -> run "pip install pygame" in your Terminal
 # Start Guide
 
 *To run the game just go in the main.py in the folder Zelda_Botw_Kattner and run it.
