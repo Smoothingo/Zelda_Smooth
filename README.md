@@ -2,8 +2,7 @@
 
 ## *Simple Text Adventure for a school Project*
 
-I hope you enjoy it. This code is still in development and i will try to finish it in my Holidays because the School Project is already over.
-
+I hope you enjoy it. 
 I will maybe add features every now and then and will try to make a nice fighting system for the Titans and Ganon.
 
 
