@@ -7,12 +7,15 @@ health = 10
 defense = 10
 #https://www.pygame.org/docs/
 def play_music(file_name):
-            dir_path = os.path.dirname(os.path.abspath(__file__))    
-            file_path = os.path.join(dir_path, file_name)
-            pygame.mixer.init()
-            pygame.mixer.music.load(file_path)
-            pygame.mixer.music.play(-1)
-#help from here:https://stackoverflow.com/questions/53246933/python-execute-playsound-in-separate-thread
+    dir_path = os.path.dirname(os.path.abspath(__file__))    
+    file_path = os.path.join(dir_path, file_name)
+    pygame.mixer.init()
+    pygame.mixer.music.load(file_path)
+    pygame.mixer.music.set_volume(0.5)
+    pygame.mixer.music.play(-1)
+
+    # https://stackoverflow.com/questions/53246933/python-execute-playsound-in-separate-thread
+
 def start_music_thread(file_name):
     music_thread = threading.Thread(target=play_music, args=(file_name,))
     music_thread.start()
@@ -311,9 +314,6 @@ def print_status():
     input("Press Enter to continue your Story...")
     bsep_line()
 
-def fightsystem(health, defense, enemy_health, enemy_defense, enemy_attack, enemy_name):
-
-    while True:
 
  
     

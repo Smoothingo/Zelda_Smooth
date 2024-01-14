@@ -150,49 +150,10 @@ def Kapitel4():
 
 
 def Start():
-    sep_line()
-    print("Im sorry but you got to excited. You cant play my Game without Brain")
-    ssep_line()
-    while True:
-        print("[1]Solve the answer of the Test to play the Game.")
-        print("[2]Be a Failier your whole Life")
-        choice = input("Enter your Choice (1, 2): ")
-        if choice == "1":
-            break
-        elif choice == "2":
-            print("You are a Failure and you will never be able to play this Game")
-            print("Good Bye")
-            sys.exit()
-        else:
-            print("Invalid Choice. Try Again")
-
-    # Intermediate physics question
-    question = '''A car of mass 1000 kg is traveling at a velocity of 20 m/s. 
-    It applies a force of 500 N in the opposite direction of its velocity for 10 seconds. 
-    What is the final velocity of the car? (Assume no external forces acting on the car.'''
-
-    # Define the correct answer
-    correct_answer = -30
-
-    # Prompt the user for an answer to the physics question
-    while True:
-        answer = input(question + "\n\nEnter your answer: ")
-        try:
-            answer = int(answer)
-            break
-        except ValueError:
-            print("Invalid answer. Please enter an integer.")
-
-    # Check if the answer is correct
-    if answer == correct_answer:
-        print("You may play the game now. Im proud that we have a Teacher who knows what they are doing at this school.")
-        time.sleep(8)
         clear()
-        time.sleep(5)
-        zelda_portrait()
-        
+        zelda_portrait()    
 
-        #start_music_thread("zeldatheme.mp3")
+        start_music_thread("zeldatheme.mp3")
 
         Copyrigtname()  
         input("Press Enter to start your legendary Adventure....")
@@ -213,10 +174,7 @@ def Start():
             time.sleep(0.05)
         print()  # print a new line at the end
         sep_line()
+
         Kapitel1()
-    else:
-        print("Sorry, that's incorrect.")
-        # Redirect the user to a Rick Astley video on YouTube
-        webbrowser.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-        sys.exit()
+
 
